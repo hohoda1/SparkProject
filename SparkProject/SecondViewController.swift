@@ -37,7 +37,12 @@ class SecondViewController: UIViewController, UICollectionViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cellList.insert((defaults.string(forKey: "headTitle"))!, at: 0)
+        let bubbleData = defaults.data(forKey: "saveBubble")
+        let bubbleHere = try! PropertyListDecoder().decode([Bubble].self, from: bubbleData!)
+        let head = bubbleHere.map { $0 .headTitle }
+        let headString = head.joined()
+        
+        cellList.insert(headString, at: 0)
     }
     
     @IBAction func btnWrite(_ sender: UIBarButtonItem) {

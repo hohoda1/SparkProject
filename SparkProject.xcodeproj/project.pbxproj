@@ -16,6 +16,7 @@
 		063175C52779906D005F2EFC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C42779906D005F2EFC /* SecondViewController.swift */; };
 		063175C727799103005F2EFC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C627799103005F2EFC /* ThirdViewController.swift */; };
 		063175C9277993A4005F2EFC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C8277993A4005F2EFC /* FourthViewController.swift */; };
+		06391039278C52E8001F959B /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06391038278C52E8001F959B /* Bubble.swift */; };
 		0695CB9C277BD30E00A86DEF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695CB9B277BD30E00A86DEF /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		063175C42779906D005F2EFC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		063175C627799103005F2EFC /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		063175C8277993A4005F2EFC /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		06391038278C52E8001F959B /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		0695CB9B277BD30E00A86DEF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				063175B927794BAB005F2EFC /* Assets.xcassets */,
 				063175BB27794BAB005F2EFC /* LaunchScreen.storyboard */,
 				063175BE27794BAB005F2EFC /* Info.plist */,
+				06391038278C52E8001F959B /* Bubble.swift */,
 			);
 			path = SparkProject;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				063175C9277993A4005F2EFC /* FourthViewController.swift in Sources */,
 				063175C52779906D005F2EFC /* SecondViewController.swift in Sources */,
 				063175B527794BAA005F2EFC /* ViewController.swift in Sources */,
+				06391039278C52E8001F959B /* Bubble.swift in Sources */,
 				063175C727799103005F2EFC /* ThirdViewController.swift in Sources */,
 				063175B127794BAA005F2EFC /* AppDelegate.swift in Sources */,
 				063175B327794BAA005F2EFC /* SceneDelegate.swift in Sources */,

@@ -68,10 +68,27 @@ class FourthViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     
     // MARK: IBAction
     @IBAction func doneBtn(_ sender: UIBarButtonItem) {
-        defaults.set(headTitle.text, forKey: "headTitle")
-        defaults.set(subTitle.text, forKey: "subTitle")
-        defaults.set(mainTextWrite.text, forKey: "mainTextWrite")
-        defaults.set(checkDate.text, forKey: "saveDate")
+        let headTitleText = headTitle.text
+        let subTitleText = subTitle.text
+        let mainTextWriteText = mainTextWrite.text
+        let checkDateText = checkDate.text
+        
+        let bubble = Bubble(headTitle: headTitleText!, subTitle: subTitleText!, mainTextWrite: mainTextWriteText!, checkDate: checkDateText!)
+        
+        var bubblesArray: [Bubble] = []
+        
+        let bubbleDatas = defaults.data(forKey: "saveBubble")
+        
+        do {
+            bubblesArray = try PropertyListDecoder().decode([Bubble].self, from: bubbleDatas!)
+        } catch {
+            
+        }
+        
+        bubblesArray.append(bubble)
+        
+        let encodedBubble = try! PropertyListEncoder().encode(bubblesArray)
+        defaults.set(encodedBubble, forKey: "saveBubble")
         
         // 뒤로가기
         _ = navigationController?.popViewController(animated: true)

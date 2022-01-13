@@ -26,10 +26,23 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        headTitleView.text = defaults.string(forKey: "headTitle")
-        subTitleView.text = defaults.string(forKey: "subTitle")
-        mainTextView.text = defaults.string(forKey: "mainTextWrite")
-        dateView.text = defaults.string(forKey: "saveDate")
+        let bubbleData = defaults.data(forKey: "saveBubble")
+        let bubbleHere = try! PropertyListDecoder().decode([Bubble].self, from: bubbleData!)
+        
+        let head = bubbleHere.map { $0 .headTitle }
+        let keyword = bubbleHere.map { $0 .subTitle }
+        let mainTextContent = bubbleHere.map { $0 .mainTextWrite }
+        let dateData = bubbleHere.map { $0 .checkDate }
+        
+        let headString = head.joined()
+        let keywordString = keyword.joined()
+        let mainTextContentString = mainTextContent.joined()
+        let dateDataString = dateData.joined()
+        
+        headTitleView.text = headString
+        subTitleView.text = keywordString
+        mainTextView.text = mainTextContentString
+        dateView.text = dateDataString
     }
     
 
