@@ -8,23 +8,27 @@
 import UIKit
 import Foundation
 
-class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ContentListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     let defaults = UserDefaults.standard
+    @IBOutlet var collectionView: UICollectionView!
     
     // Cell Array
-    var cellList: [String] = []
+    var bubbleList: [Bubble] = []
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cellList.count
+        return bubbleList.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectCell", for: indexPath) as? CollectionViewCell else {
             return UICollectionViewCell()
         }
         
-        let img = UIImage(named: "\(cellList[indexPath.row]).jpg")
+        let index = indexPath.item
+        let bubble = bubbleList[index]
+        
+        let img = UIImage(named: "\(bubble.headTitle).jpg")
         cell.cellImgView?.image = img
-        cell.cellLabel?.text = cellList[indexPath.row]
+        cell.cellLabel?.text = bubble.headTitle
         return cell
     }
     
@@ -34,9 +38,8 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         // Do any additional setup after loading the view.
         let bubbleData = defaults.data(forKey: "saveBubble")
         let bubbleHere = try! PropertyListDecoder().decode([Bubble].self, from: bubbleData!)
-        let head = bubbleHere.map { $0 .headTitle }
         
-        cellList.insert(contentsOf: head, at: 0)
+        bubbleList.insert(contentsOf: bubbleHere, at: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,9 +54,16 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is ThirdViewController {
-            let vc = segue.destination as! ThirdViewController
-            vc.naviPushData = defaults.data(forKey: "saveBubble")
+        if segue.destination is ContentDetailViewController {
+            let cell = sender as! UICollectionViewCell
+            let indexPath = collectionView.indexPath(for: cell)
+            
+            guard let index = indexPath?.item else {
+                return
+            }
+            let bubble = bubbleList[index]
+            let vc = segue.destination as! ContentDetailViewController
+            vc.bubble = bubble
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

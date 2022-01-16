@@ -1,0 +1,16 @@
+PODS:
+  - SIFloatingCollection (3.0.1)
+
+DEPENDENCIES:
+  - SIFloatingCollection
+
+SPEC REPOS:
+  trunk:
+    - SIFloatingCollection
+
+SPEC CHECKSUMS:
+  SIFloatingCollection: 096160b220e3a1b1cbcf349108ee24d3aa6b86de
+
+PODFILE CHECKSUM: ff2a4c1a02d641197ecfa866f8eef569c3907ee6
+
+COCOAPODS: 1.11.2

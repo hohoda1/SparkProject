@@ -9,31 +9,37 @@
 /* Begin PBXBuildFile section */
 		063175B127794BAA005F2EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175B027794BAA005F2EFC /* AppDelegate.swift */; };
 		063175B327794BAA005F2EFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175B227794BAA005F2EFC /* SceneDelegate.swift */; };
-		063175B527794BAA005F2EFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175B427794BAA005F2EFC /* ViewController.swift */; };
+		063175B527794BAA005F2EFC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175B427794BAA005F2EFC /* MainViewController.swift */; };
 		063175B827794BAA005F2EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 063175B627794BAA005F2EFC /* Main.storyboard */; };
 		063175BA27794BAB005F2EFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063175B927794BAB005F2EFC /* Assets.xcassets */; };
 		063175BD27794BAB005F2EFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 063175BB27794BAB005F2EFC /* LaunchScreen.storyboard */; };
-		063175C52779906D005F2EFC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C42779906D005F2EFC /* SecondViewController.swift */; };
-		063175C727799103005F2EFC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C627799103005F2EFC /* ThirdViewController.swift */; };
-		063175C9277993A4005F2EFC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C8277993A4005F2EFC /* FourthViewController.swift */; };
+		063175C52779906D005F2EFC /* ContentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C42779906D005F2EFC /* ContentListViewController.swift */; };
+		063175C727799103005F2EFC /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C627799103005F2EFC /* ContentDetailViewController.swift */; };
+		063175C9277993A4005F2EFC /* WriteContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063175C8277993A4005F2EFC /* WriteContentViewController.swift */; };
 		06391039278C52E8001F959B /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06391038278C52E8001F959B /* Bubble.swift */; };
-		0695CB9C277BD30E00A86DEF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0695CB9B277BD30E00A86DEF /* Model.swift */; };
+		064A7F282793FE7E0025D64F /* BubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A7F272793FE7E0025D64F /* BubbleNode.swift */; };
+		06E81A4E2793F9A100648C05 /* BubblesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E81A4D2793F9A100648C05 /* BubblesScene.swift */; };
+		B232F4AEA5A0308B1EE2C75E /* Pods_SparkProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E34B45FDF48EBC6B117FC5 /* Pods_SparkProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		063175AD27794BAA005F2EFC /* SparkProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		063175B027794BAA005F2EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		063175B227794BAA005F2EFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		063175B427794BAA005F2EFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		063175B427794BAA005F2EFC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		063175B727794BAA005F2EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		063175B927794BAB005F2EFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		063175BC27794BAB005F2EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		063175BE27794BAB005F2EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		063175C42779906D005F2EFC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		063175C627799103005F2EFC /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		063175C8277993A4005F2EFC /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		063175C42779906D005F2EFC /* ContentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListViewController.swift; sourceTree = "<group>"; };
+		063175C627799103005F2EFC /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		063175C8277993A4005F2EFC /* WriteContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteContentViewController.swift; sourceTree = "<group>"; };
 		06391038278C52E8001F959B /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
-		0695CB9B277BD30E00A86DEF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		064A7F272793FE7E0025D64F /* BubbleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleNode.swift; sourceTree = "<group>"; };
+		06E81A4D2793F9A100648C05 /* BubblesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesScene.swift; sourceTree = "<group>"; };
+		1405B7E08857FD1B62623A5B /* Pods-SparkProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkProject.debug.xcconfig"; path = "Target Support Files/Pods-SparkProject/Pods-SparkProject.debug.xcconfig"; sourceTree = "<group>"; };
+		50E34B45FDF48EBC6B117FC5 /* Pods_SparkProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BF7174C4BC79AE099006A52 /* Pods-SparkProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkProject.release.xcconfig"; path = "Target Support Files/Pods-SparkProject/Pods-SparkProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B232F4AEA5A0308B1EE2C75E /* Pods_SparkProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +59,8 @@
 			children = (
 				063175AF27794BAA005F2EFC /* SparkProject */,
 				063175AE27794BAA005F2EFC /* Products */,
+				72803B24835BDC9EF0B5AB38 /* Pods */,
+				5913B26B1A0B83E8D9354663 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,28 +75,38 @@
 		063175AF27794BAA005F2EFC /* SparkProject */ = {
 			isa = PBXGroup;
 			children = (
-				0695CB98277AE9D100A86DEF /* DataSave */,
 				063175B027794BAA005F2EFC /* AppDelegate.swift */,
 				063175B227794BAA005F2EFC /* SceneDelegate.swift */,
-				063175B427794BAA005F2EFC /* ViewController.swift */,
+				063175B427794BAA005F2EFC /* MainViewController.swift */,
 				063175B627794BAA005F2EFC /* Main.storyboard */,
-				063175C8277993A4005F2EFC /* FourthViewController.swift */,
-				063175C627799103005F2EFC /* ThirdViewController.swift */,
-				063175C42779906D005F2EFC /* SecondViewController.swift */,
+				063175C8277993A4005F2EFC /* WriteContentViewController.swift */,
+				063175C627799103005F2EFC /* ContentDetailViewController.swift */,
+				063175C42779906D005F2EFC /* ContentListViewController.swift */,
 				063175B927794BAB005F2EFC /* Assets.xcassets */,
 				063175BB27794BAB005F2EFC /* LaunchScreen.storyboard */,
 				063175BE27794BAB005F2EFC /* Info.plist */,
 				06391038278C52E8001F959B /* Bubble.swift */,
+				06E81A4D2793F9A100648C05 /* BubblesScene.swift */,
+				064A7F272793FE7E0025D64F /* BubbleNode.swift */,
 			);
 			path = SparkProject;
 			sourceTree = "<group>";
 		};
-		0695CB98277AE9D100A86DEF /* DataSave */ = {
+		5913B26B1A0B83E8D9354663 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0695CB9B277BD30E00A86DEF /* Model.swift */,
+				50E34B45FDF48EBC6B117FC5 /* Pods_SparkProject.framework */,
 			);
-			path = DataSave;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72803B24835BDC9EF0B5AB38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1405B7E08857FD1B62623A5B /* Pods-SparkProject.debug.xcconfig */,
+				9BF7174C4BC79AE099006A52 /* Pods-SparkProject.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 063175C127794BAB005F2EFC /* Build configuration list for PBXNativeTarget "SparkProject" */;
 			buildPhases = (
+				966CCA40D970ED914E5B88A3 /* [CP] Check Pods Manifest.lock */,
 				063175A927794BAA005F2EFC /* Sources */,
 				063175AA27794BAA005F2EFC /* Frameworks */,
 				063175AB27794BAA005F2EFC /* Resources */,
+				6D39BDDEAADA1C75944D4893 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,19 +177,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D39BDDEAADA1C75944D4893 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparkProject/Pods-SparkProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SparkProject/Pods-SparkProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SparkProject/Pods-SparkProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		966CCA40D970ED914E5B88A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparkProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		063175A927794BAA005F2EFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				063175C9277993A4005F2EFC /* FourthViewController.swift in Sources */,
-				063175C52779906D005F2EFC /* SecondViewController.swift in Sources */,
-				063175B527794BAA005F2EFC /* ViewController.swift in Sources */,
+				063175C9277993A4005F2EFC /* WriteContentViewController.swift in Sources */,
+				063175C52779906D005F2EFC /* ContentListViewController.swift in Sources */,
+				06E81A4E2793F9A100648C05 /* BubblesScene.swift in Sources */,
+				064A7F282793FE7E0025D64F /* BubbleNode.swift in Sources */,
+				063175B527794BAA005F2EFC /* MainViewController.swift in Sources */,
 				06391039278C52E8001F959B /* Bubble.swift in Sources */,
-				063175C727799103005F2EFC /* ThirdViewController.swift in Sources */,
+				063175C727799103005F2EFC /* ContentDetailViewController.swift in Sources */,
 				063175B127794BAA005F2EFC /* AppDelegate.swift in Sources */,
 				063175B327794BAA005F2EFC /* SceneDelegate.swift in Sources */,
-				0695CB9C277BD30E00A86DEF /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +376,7 @@
 		};
 		063175C227794BAB005F2EFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1405B7E08857FD1B62623A5B /* Pods-SparkProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +404,7 @@
 		};
 		063175C327794BAB005F2EFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BF7174C4BC79AE099006A52 /* Pods-SparkProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

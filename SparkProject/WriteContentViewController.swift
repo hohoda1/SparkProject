@@ -13,11 +13,13 @@ protocol TextData {
 }
 
 // MARK: - Class 글쓰기 페이지
-class FourthViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class WriteContentViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     // UserDefaults
     let defaults = UserDefaults.standard
     
     var delegate: TextData?
+    
+    var doneWrite: ((_ keyword: String) -> ())?
     
     // MARK: - Date
     func getDateToString() -> String {
@@ -69,26 +71,36 @@ class FourthViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     // MARK: IBAction
     @IBAction func doneBtn(_ sender: UIBarButtonItem) {
         let headTitleText = headTitle.text
-        let subTitleText = subTitle.text
+        guard let subTitleText = subTitle.text else {
+            return
+        }
         let mainTextWriteText = mainTextWrite.text
         let checkDateText = checkDate.text
         
-        let bubble = Bubble(headTitle: headTitleText!, subTitle: subTitleText!, mainTextWrite: mainTextWriteText!, checkDate: checkDateText!)
+        let bubble = Bubble(headTitle: headTitleText!, subTitle: subTitleText, mainTextWrite: mainTextWriteText!, checkDate: checkDateText!)
         
         var bubblesArray: [Bubble] = []
         
-        let bubbleDatas = defaults.data(forKey: "saveBubble")
-        
-        do {
-            bubblesArray = try PropertyListDecoder().decode([Bubble].self, from: bubbleDatas!)
-        } catch {
-            
+        if let bubbleDatas = defaults.data(forKey: subTitleText) {
+            do {
+                bubblesArray = try PropertyListDecoder().decode([Bubble].self, from: bubbleDatas)
+            } catch {
+                
+            }
         }
         
         bubblesArray.append(bubble)
         
         let encodedBubble = try! PropertyListEncoder().encode(bubblesArray)
-        defaults.set(encodedBubble, forKey: "saveBubble")
+        defaults.set(encodedBubble, forKey: subTitleText)
+        var keywords: [String] = []
+        if let keywordArray = defaults.value(forKey: "Keywords") as? [String] {
+            keywords = keywordArray
+        }
+        keywords.append(subTitleText)
+        defaults.set(keywords, forKey: "Keywords")
+        
+        doneWrite?(subTitleText)
         
         // 뒤로가기
         _ = navigationController?.popViewController(animated: true)

@@ -8,10 +8,10 @@
 import UIKit
 import Foundation
 
-class ThirdViewController: UIViewController, UITextFieldDelegate {
+class ContentDetailViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: SecondViewController Segue Push Data
-    var naviPushData: Data?
+    var bubble: Bubble?
     
     // MARK: IBOutlet
     @IBOutlet var headTitleView: UILabel!
@@ -27,18 +27,15 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let bubbleHere = try! PropertyListDecoder().decode([Bubble].self, from: naviPushData!)
+        guard let bubble = bubble else {
+            return
+        }
         
-        let head = bubbleHere.map { $0 .headTitle }
-        let keyword = bubbleHere.map { $0 .subTitle }
-        let mainTextContent = bubbleHere.map { $0 .mainTextWrite }
-        let dateData = bubbleHere.map { $0 .checkDate }
-        
-        let headString = head.joined()
-        let keywordString = keyword.joined()
-        let mainTextContentString = mainTextContent.joined()
-        let dateDataString = dateData.joined()
-        
+        let headString = bubble.headTitle
+        let keywordString = bubble.subTitle
+        let mainTextContentString = bubble.mainTextWrite
+        let dateDataString = bubble.checkDate
+
         headTitleView.text = headString
         subTitleView.text = keywordString
         mainTextView.text = mainTextContentString
