@@ -9,8 +9,9 @@ import UIKit
 import Foundation
 
 class ThirdViewController: UIViewController, UITextFieldDelegate {
-    // UserDefaults
-    let defaults = UserDefaults.standard
+    
+    // MARK: SecondViewController Segue Push Data
+    var naviPushData: Data?
     
     // MARK: IBOutlet
     @IBOutlet var headTitleView: UILabel!
@@ -20,14 +21,13 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let bubbleData = defaults.data(forKey: "saveBubble")
-        let bubbleHere = try! PropertyListDecoder().decode([Bubble].self, from: bubbleData!)
+        
+        let bubbleHere = try! PropertyListDecoder().decode([Bubble].self, from: naviPushData!)
         
         let head = bubbleHere.map { $0 .headTitle }
         let keyword = bubbleHere.map { $0 .subTitle }
